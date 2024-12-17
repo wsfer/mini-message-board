@@ -19,11 +19,20 @@ const messages = [
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
   res.render('index', { title: 'Mini messageboard', messages });
 });
+
 app.get('/new', (req, res) => {
   res.render('form', { title: 'Mini messageboard | New' });
+});
+
+app.post('/new', (req, res) => {
+  const { text, user } = req.body;
+  messages.push({ text, user, added: new Date() });
+  res.redirect('/');
 });
 
 app.listen(PORT, () => {
