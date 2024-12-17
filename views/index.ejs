@@ -2,6 +2,7 @@
 <html lang="en">
 <%- include("partials/head", { title }) %>
 <body>
+    <%- include("partials/header") %>
     <% messages.map(({ text, user, added }) => { %>
         <p><%= user %></p>
         <p><%= text %></p>
