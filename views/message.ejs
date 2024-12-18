@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", { title }) %>
+<body>
+    <%- include("partials/header") %>
+    <p><%= message.user %></p>
+    <p><%= message.text %></p>
+    <p><%= message.createdAt %></p>
+    <%- include("partials/footer") %>
+</body>
+</html>
