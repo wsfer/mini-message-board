@@ -3,12 +3,14 @@
 <%- include("partials/head", { title }) %>
 <body>
     <%- include("partials/header") %>
-    <% messages.map(({ id, text, user, createdAt }) => { %>
-        <p><%= user %></p>
-        <p><%= text %></p>
-        <p><%= createdAt %></p>
-        <a href=<%= `/messages/message/${id}` %>>link</a>
-    <% }) %>
+    <main>
+        <% messages.map(({ id, text, user, createdAt }) => { %>
+            <p><%= user %></p>
+            <p><%= text %></p>
+            <p><%= createdAt %></p>
+            <a href=<%= `/messages/message/${id}` %>>link</a>
+        <% }) %>
+    </main>
     <%- include("partials/footer") %>
 </body>
 </html>

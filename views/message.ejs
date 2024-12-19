@@ -3,9 +3,11 @@
 <%- include("partials/head", { title }) %>
 <body>
     <%- include("partials/header") %>
-    <p><%= message.user %></p>
-    <p><%= message.text %></p>
-    <p><%= message.createdAt %></p>
+    <main>
+        <p><%= message.user %></p>
+        <p><%= message.text %></p>
+        <p><%= message.createdAt %></p>
+    </main>
     <%- include("partials/footer") %>
 </body>
 </html>
