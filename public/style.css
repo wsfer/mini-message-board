@@ -55,6 +55,37 @@ body {
 
 .header__link:hover,
 .header__link:focus {
-  color: hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 70%);
   text-decoration: underline;
+}
+
+.footer {
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 90%);
+}
+
+.footer__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__link {
+  display: inline-block;
+  width: 2rem;
+}
+
+.footer__icon {
+  fill: hsl(0, 0%, 90%);
+}
+
+.footer__link:hover .footer__icon,
+.footer__link:focus .footer__icon {
+  fill: hsl(0, 0%, 70%);
 }
