@@ -4,12 +4,18 @@
 <body>
     <%- include("partials/header") %>
     <main>
-        <% messages.map(({ id, text, user, createdAt }) => { %>
-            <p><%= user %></p>
-            <p><%= text %></p>
-            <p><%= createdAt %></p>
-            <a href=<%= `/messages/message/${id}` %>>link</a>
-        <% }) %>
+        <div class="container">
+            <h1 class="title">Lastest messages</h1>
+            <% if (messages.length === 0) { %>
+                <p>There's no new messages now</p>
+            <% } else { %>
+                <ul class="message-list">
+                    <% messages.map((msg) => { %>
+                        <li><%- include("partials/message-card", { message: msg }) %></li>
+                    <% }) %>
+                </ul>
+            <% } %>
+        </div>
     </main>
     <%- include("partials/footer") %>
 </body>

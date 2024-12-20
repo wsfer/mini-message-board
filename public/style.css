@@ -21,6 +21,19 @@ body {
   min-height: 100vh;
 }
 
+main {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+.title {
+  color: hsl(0, 0%, 15%);
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
@@ -60,6 +73,54 @@ body {
 .header__link:focus {
   color: hsl(0, 0%, 70%);
   text-decoration: underline;
+}
+
+.message-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message {
+  background-color: hsl(0, 0%, 80%);
+  margin-top: 0.25rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.message:has(.message__link:hover),
+.message:has(.message__link:focus) {
+  background-color: hsl(0, 0%, 70%);
+}
+
+.message__user {
+  color: hsl(0, 0%, 15%);
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.message__text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: hsl(0, 0%, 15%);
+  display: -webkit-box;
+  line-clamp: 3;
+  line-height: 1.5rem;
+  max-height: 4.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message__date {
+  color: hsl(0, 0%, 25%);
+  font-size: 0.8rem;
+}
+
+.message__link {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .footer {
