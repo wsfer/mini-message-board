@@ -123,6 +123,38 @@ main {
   top: 0;
 }
 
+.form {
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 80%);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form__input {
+  background-color: hsl(0, 0%, 80%);
+  border: none;
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.5rem;
+}
+
+.form__textarea {
+  resize: none;
+}
+
+.form__button {
+  background-color: hsl(0, 0%, 25%);
+  border: none;
+  color: hsl(0, 0%, 90%);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.form__button:hover,
+.form__button:focus {
+  background-color: hsl(0, 0%, 35%);
+}
+
 .footer {
   background-color: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 90%);
