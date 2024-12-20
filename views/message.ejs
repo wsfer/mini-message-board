@@ -4,9 +4,13 @@
 <body>
     <%- include("partials/header") %>
     <main>
-        <p><%= message.user %></p>
-        <p><%= message.text %></p>
-        <p><%= message.createdAt %></p>
+        <div class="container">
+            <h1 class="title">Message from <%= message.user %></h1>
+            <p class="message__text"><span class="sr-only">Message:</span><%= message.text %></p>
+            <time class="message__date" datetime=<%= message.createdAt %>>
+                <%= message.createdAt.toLocaleDateString() %>
+            </time>
+        </div>
     </main>
     <%- include("partials/footer") %>
 </body>
