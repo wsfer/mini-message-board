@@ -21,7 +21,8 @@ async function getMessageById(id) {
 }
 
 async function createMessage({ user, text }) {
-  messages.push({
+  // This is slow, but a real database would be better
+  messages.unshift({
     id: autoIncrementId++,
     user: user,
     text: text,
