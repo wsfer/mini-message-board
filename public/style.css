@@ -185,3 +185,16 @@ main {
 .footer__link:focus .footer__icon {
   fill: hsl(0, 0%, 70%);
 }
+
+.notfound {
+  color: hsl(0, 0%, 15%);
+  text-align: center;
+}
+
+.notfound__title {
+  font-size: 5rem;
+}
+
+.notfound__message {
+  font-size: 2rem;
+}
