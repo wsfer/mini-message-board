@@ -14,6 +14,17 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.redirect('/messages'));
 app.use('/messages', messagesRouter);
 
+app.use((err, req, res, next) => {
+  const { statusCode, message } = err;
+
+  if (statusCode === 404) {
+    res.status(404).render('404', { message });
+  } else {
+    console.error(err);
+    res.status(statusCode || 500).end();
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
