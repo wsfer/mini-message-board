@@ -1,11 +1,13 @@
 const db = require('../db');
+const asyncHandler = require('express-async-handler');
+const NotFoundError = require('../errors/NotFoundError');
 
-async function getAllMessages(req, res) {
+const getAllMessages = asyncHandler(async (req, res) => {
   const messages = await db.getAllMessages();
   res.render('index', { title: 'Mini messageboard', messages: messages });
-}
+});
 
-async function getMessage(req, res) {
+const getMessage = asyncHandler(async (req, res) => {
   const id = Number(req.params.id);
   const message = await db.getMessageById(id);
 
@@ -15,19 +17,18 @@ async function getMessage(req, res) {
       message: message,
     });
   } else {
-    // TODO: instead throw some error here
-    res.status(404).end();
+    throw new NotFoundError('Message not found');
   }
-}
+});
 
-async function getMessageForm(req, res) {
+const getMessageForm = asyncHandler(async (req, res) => {
   res.render('message-form', { title: 'Mini messageboard | new message' });
-}
+});
 
-async function postMessage(req, res) {
+const postMessage = asyncHandler(async (req, res) => {
   const { user, text } = req.body;
   await db.createMessage({ user, text });
   res.redirect('/messages');
-}
+});
 
 module.exports = { getAllMessages, getMessage, getMessageForm, postMessage };
