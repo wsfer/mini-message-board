@@ -123,6 +123,15 @@ main {
   top: 0;
 }
 
+.message-page__text {
+  color: hsl(0, 0%, 15%);
+  line-height: 1.5rem;
+}
+
+.message-page__date {
+  color: hsl(0, 0%, 25%);
+}
+
 .form {
   background-color: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 80%);

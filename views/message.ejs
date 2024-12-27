@@ -5,11 +5,13 @@
     <%- include("partials/header") %>
     <main>
         <div class="container">
-            <h1 class="title">Message from <%= message.user %></h1>
-            <p class="message__text"><span class="sr-only">Message:</span><%= message.text %></p>
-            <time class="message__date" datetime=<%= message.createdAt %>>
-                <%= message.createdAt.toLocaleDateString() %>
-            </time>
+            <div class="message-page">
+                <h1 class="title">Message from <%= message.user %></h1>
+                <p class="message-page__text"><span class="sr-only">Message:</span><%= message.text %></p>
+                <time class="message-page__date" datetime=<%= message.createdAt %>>
+                    <%= message.createdAt.toLocaleDateString() %>
+                </time>
+            </div>
         </div>
     </main>
     <%- include("partials/footer") %>
