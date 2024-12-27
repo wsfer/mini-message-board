@@ -1,6 +1,6 @@
 # Mini Message Board
 
-This is a very basic message board website which I built as part of [The Odin Project](https://www.theodinproject.com/) curriculum.
+This is a very basic message board website which I built as part of [The Odin Project](https://www.theodinproject.com/) curriculum. Additionally the project was deployed on render https://mini-message-board-rmau.onrender.com/
 
 ## Technologies
 
@@ -31,7 +31,8 @@ then access from your browser localhost:3000
 
 <ul>
     <li>How MVC pattern works;</li>
-    <li>How to render dynamic data on the server side.</li>
+    <li>How to render dynamic data on the server side;</li>
+    <li>How to deploy a node web app.</li>
 </ul>
 
 ## Issues/Todos
