@@ -3,7 +3,7 @@
  *
  * Message {
  *    id: Integer
- *    user: String
+ *    username: String
  *    text: String
  *    createdAt: Date
  * }
@@ -20,11 +20,11 @@ async function getMessageById(id) {
   return messages.find((msg) => msg.id === id);
 }
 
-async function createMessage({ user, text }) {
+async function createMessage({ username, text }) {
   // This is slow, but a real database would be better
   messages.unshift({
     id: autoIncrementId++,
-    user: user,
+    username: username,
     text: text,
     createdAt: new Date(),
   });

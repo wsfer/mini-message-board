@@ -26,8 +26,8 @@ const getMessageForm = asyncHandler(async (req, res) => {
 });
 
 const postMessage = asyncHandler(async (req, res) => {
-  const { user, text } = req.body;
-  await db.createMessage({ user, text });
+  const { username, text } = req.body;
+  await db.createMessage({ username, text });
   res.redirect('/messages');
 });
 
