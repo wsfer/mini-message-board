@@ -8,4 +8,5 @@ module.exports = new Pool({
   database: PGDATABASE,
   password: PGPASSWORD,
   port: 5432,
+  ssl: { require: true },
 });
