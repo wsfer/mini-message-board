@@ -5,7 +5,7 @@
  *    id: Integer
  *    username: String
  *    text: String
- *    createdAt: Date
+ *    created_at: Date
  * }
  */
 
@@ -26,7 +26,7 @@ async function createMessage({ username, text }) {
     id: autoIncrementId++,
     username: username,
     text: text,
-    createdAt: new Date(),
+    created_at: new Date(),
   });
 }
 

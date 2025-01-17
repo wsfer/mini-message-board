@@ -9,7 +9,7 @@
                 <h1 class="title">Message from <%= message.username %></h1>
                 <p class="message-page__text"><span class="sr-only">Message:</span><%= message.text %></p>
                 <time class="message-page__date" datetime=<%= message.createdAt %>>
-                    <%= message.createdAt.toLocaleDateString() %>
+                    <%= message.created_at.toLocaleDateString() %>
                 </time>
             </div>
         </div>

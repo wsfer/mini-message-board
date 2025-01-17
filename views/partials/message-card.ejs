@@ -2,7 +2,7 @@
     <p class="message__user"><span class="sr-only">User: </span><%= message.username %></p>
     <p class="message__text"><span class="sr-only">Message:</span><%= message.text %></p>
     <time class="message__date" datetime=<%= message.createdAt %>>
-        <%= message.createdAt.toLocaleDateString() %>
+        <%= message.created_at.toLocaleDateString() %>
     </time>
     <a class="message__link" href=<%= `/messages/message/${message.id}` %>><span class="sr-only">See more</span></a>
 </article>
